@@ -30,10 +30,9 @@ public class CrearCuentaAdministradorTest {
         String email = "aldamajoaquin@gmail.com";
         String password = "Prueba123";
 
-
+//Registro Admin
         browser.interaction().navigateTo("http://cestore.ces.com.uy/adminces/");
         browser.find().css("a[href='/adminces/register']").click();
-
         browser.find().name("inputFirstName").write("QA");
         browser.find().name("inputLastName").write("Automation");
         browser.find().name("inputEmail").write(email);
@@ -43,6 +42,7 @@ public class CrearCuentaAdministradorTest {
         browser.find().css("#formAccount > div:nth-child(4)").click();
         browser.find().id("btnRegister").click();
 
+        //cierra popup
         browser.wait(".swal2-popup").css();
         Element modal = browser.find().css(".swal2-title");
         String mensajeObtenido = modal.getText();

@@ -49,6 +49,7 @@ public class CrearCuentaTesterTest {
         browser.find().id("testerJunior").click();
         browser.find().id("btnRegister").click();
 
+       //cierra popup
         browser.wait(".swal2-popup").css();
         Element modal = browser.find().css(".swal2-title");
         String mensajeObtenido = modal.getText();

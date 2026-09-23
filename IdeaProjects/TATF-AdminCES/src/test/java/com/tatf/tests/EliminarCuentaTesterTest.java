@@ -2,12 +2,10 @@ package com.tatf.tests;
 
 import com.tatf.core.browser.BrowserFactory;
 import com.tatf.core.browser.IBrowser;
-import com.tatf.core.element.Element;
 import com.tatf.core.verification.IVerify;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-
 
 public class EliminarCuentaTesterTest {
 
@@ -28,8 +26,7 @@ public class EliminarCuentaTesterTest {
 
     @Test
     void eliminarCuentaTester() {
-        String email = "tester.qa." + Long.toString(System.currentTimeMillis(), 36) + "@miempresa.com";
-        String password = "Prueba123";
+        String email = "jeniffer@gmail.com";
 
         // Login
         browser.interaction().navigateTo("http://cestore.ces.com.uy/adminces/");
@@ -40,9 +37,14 @@ public class EliminarCuentaTesterTest {
         browser.wait(".swal2-popup").css();
         browser.find().css(".swal2-confirm").click();
 
-        // Eliminacion Tester
-        browser.interaction().navigateTo("http://cestore.ces.com.uy/adminces/view-users");
+        // Eliminación Tester
+        browser.find().css("a[href='/adminces/view-users']").click();
+        browser.wait("bodyTable").id();
         browser.find().id(email).click();
+
+       // cierra popup
+        browser.wait(".swal2-popup").css();
+        browser.find().css(".swal2-confirm").click();
 
         String tablaUsuarios = browser.find().id("bodyTable").getText();
         IVerify.create().verifyTrue(!tablaUsuarios.contains(email),
