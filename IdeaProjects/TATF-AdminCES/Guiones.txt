@@ -1,0 +1,114 @@
+1. Crear Admin
+
+Precondición:
+
+Ingresar a aplicación “AdminCES”
+
+Pasos:
+
+1. Seleccionar botón “Registrarse” en la homepage
+
+2. Completar campos bajo el título “CREAR CUENTA ADMINISTRADOR” con datos válidos
+
+3. Hacer click en botón “Registrarse”
+
+4. Seleccionar botón “Ok” tras mensaje de éxito rol Administrador y el usuario puede iniciar sesión con sus credenciales.
+-----------------------------------------------------------------------------------------------------
+2. Crear cuenta Tester
+
+Precondiciones:
+
+Existe un usuario Administrador
+
+Se ingresa a aplicación “AdminCES” en un navegador
+
+Función auxiliar: Login
+
+Pasos “Login”:
+
+1. Ingresar a “AdminCES”
+
+2. Seleccionar botón “INICIAR SESIÓN”
+
+3.Completar {Email}
+
+4.Completar {Contraseña}
+
+5.Seleccionar botón “Iniciar Sesión”
+
+Pasos escenario:
+
+1.Función {Login}
+
+2.Seleccionar botón “CREAR USUARIO”
+
+3.Completar “Nombre”
+
+4.Completar “Apellido”
+
+5.Completar “Email”
+
+6.Completar “País de nacimiento”
+
+7.Completar “Contraseña por defecto”
+
+8.Asignar perfil Tester
+
+9.Seleccionar botón “Crear cuenta”
+---------------------------------------------------------------------------------------
+3- Reiniciar contraseña
+
+Precondiciones:
+
+-Ingresar a aplicación “AdminCES”
+
+-Existe usuario administrador registrado en “AdminCES”
+
+Pasos:
+
+1.Seleccionar botón “REINICIAR CONTRASEÑA” en la homepage
+
+2.Completar campos con datos válidos
+
+3.Hacer click en botón “Rei. Contraseña”
+
+4.Seleccionar botón “Ok” tras mensaje de éxito
+------------------------------------------------------------------------------------------------
+4- Eliminar cuenta tester
+
+Precondiciones:
+
+-Existe un usuario Administrador
+
+-Existe un usuario Tester
+
+-Se ingresa a aplicación “AdminCES” en un navegador
+
+Función auxiliar: Login
+
+Pasos “Login”:
+
+1-Ingresar a “AdminCES”
+
+2.Seleccionar botón “INICIAR SESIÓN”
+
+3.Completar {Email}
+
+4.Completar {Contraseña}
+
+5.Seleccionar botón “Iniciar Sesión”
+
+Pasos escenario:
+
+1.Función {Login}
+
+2.Seleccionar botón “VER USUARIOS”
+
+3.Visualizar en la grilla el usuario Tester previamente creado
+
+4.Seleccionar acción “Eliminar usuario”(Ícono Basura”)
+
+5.Seleccionar “Sí”
+
+6.Seleccionar “OK”
+
