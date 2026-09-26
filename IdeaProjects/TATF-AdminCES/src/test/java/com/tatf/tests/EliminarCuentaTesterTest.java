@@ -15,7 +15,7 @@ public class EliminarCuentaTesterTest {
     static void beforeAll() {
         browser = BrowserFactory.getBrowser(true);
         browser.interaction().navigateTo("http://cestore.ces.com.uy/adminces/");
-        browser.find().css("input[type='password']").write("3)ea60e0be3ba12c6ecd%7297868%5c4");
+        browser.find().css("input[type='password']").write("Insertar Hash");
         browser.find().css("button[type='submit']").click();
     }
 
